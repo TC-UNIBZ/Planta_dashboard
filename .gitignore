@@ -1,0 +1,23 @@
+# RStudio
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+Data_dashboard.Rproj
+
+# Quarto temporary files
+.quarto/
+**/*.quarto_ipynb
+
+# Dashboard intermediates
+RDS_objects/
+
+# Local only
+Config/
+R scripts/
+
+# Optional: if rendering to docs/
+# leave docs/ OUT of .gitignore
+
+# Optional: if rendering to _site/
+# leave _site/ OUT of .gitignore

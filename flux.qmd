@@ -1,0 +1,137 @@
+---
+title: "Flux data"
+---
+
+```{r}
+#| echo: FALSE
+#| output: FALSE
+
+library(tidyverse)
+library(plotly)
+hour_interval <- function(tstamp, int=0.5, digits=0){
+  h <- as.character(format(tstamp, "%H:%M")) 
+  h2 <- sapply(strsplit(h,":"),
+               function(x) {
+                 x <- as.numeric(x)
+                 x[1]+x[2]/60
+               }
+  )
+  Hour_int  <- round(h2/int, digits)*int
+  return(Hour_int)
+}
+
+NEE_fingerprint <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/NEE_fingerprint.RDS")
+
+NEE_rawplotly <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/NEE_rawplotly.RDS")
+
+ET_fingerprint <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/ET_fingerprint.RDS")
+
+ET_rawplotly <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/ET_rawplotly.RDS")
+
+LE_fingerprint <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/LE_fingerprint.RDS")
+
+LE_rawplotly <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/LE_rawplotly.RDS")
+
+H_fingerprint <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/H_fingerprint.RDS")
+
+H_rawplotly <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/H_rawplotly.RDS")
+
+
+```
+
+
+## Row {height=50%}
+### Column {.tabset}
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: false
+#| error: false
+#| title: Net Ecosystem Exchange
+NEE_rawplotly
+
+```
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: FALSE
+#| error: false
+#| title: Fingerprint
+
+suppressWarnings(
+print(NEE_fingerprint)
+)
+```
+### Column {.tabset}
+
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: false
+#| error: false
+#| title: Evapotranspiration
+ET_rawplotly
+
+```
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: FALSE
+#| error: false
+#| title: Fingerprint
+
+suppressWarnings(
+print(ET_fingerprint)
+)
+```
+## Row {height=50%}
+### Column {.tabset}
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: false
+#| error: false
+#| title: Latent Energy
+LE_rawplotly
+
+```
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: FALSE
+#| error: false
+#| title: Fingerprint
+
+suppressWarnings(
+print(LE_fingerprint)
+)
+```
+### Column {.tabset}
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: false
+#| error: false
+#| title: Sensible Heat
+H_rawplotly
+
+```
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: FALSE
+#| error: false
+#| title: Fingerprint
+
+suppressWarnings(
+print(H_fingerprint)
+)
+```

@@ -1,0 +1,142 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Meteo data",
+    "section": "",
+    "text": "Table\nstatus\nn_rec\nn_col\nfirst_TS_UTC+1\nlast_TS_UTC+1\nTS_modified_CET\nsize_mb\nTS_missing_fraction\nN_duplicate_TS\n\n\n\n\nCR3000_meteo\nOK\n14105\n27\n2025-09-23 11:00:00\n2026-07-17 10:00:00\n2026-07-17 11:00:26\n4.967\n0\n0\n\n\nCR1000_meteo_Table15\nOK\n25490\n21\n2025-09-23 11:15:00\n2026-07-17 10:00:00\n2026-07-17 11:00:19\n6.704\n0\n0\n\n\nCR1000_CH_PPFchard\nDuplicate timestamps present\n78765\n9\n2024-04-16 22:15:00\n2026-07-17 10:00:00\n2026-07-17 11:00:15\n17.974\n0\n1\n\n\nCR1000_par_PAR_table\nOK\n22500\n24\n2025-04-04 16:00:00\n2026-07-17 09:30:00\n2026-07-17 11:00:20\n6.762\n0\n0\n\n\nCR1000_profile_SoilProfile\nOK\n19451\n38\n2025-11-05 02:45:00\n2026-07-17 09:45:00\n2026-07-17 11:00:24\n6.499\n0\n0\n\n\nCR1000_profile_AtmoProfile\nOK\n23631\n15\n2025-09-13 01:45:00\n2026-07-17 09:45:00\n2026-07-17 11:00:21\n6.312\n0\n0"
+  },
+  {
+    "objectID": "meteo.html",
+    "href": "meteo.html",
+    "title": "Meteorological data",
+    "section": "",
+    "text": "diagnostics_tbl&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/diagnostics_tbl.RDS\")\nEBC_rawplotly&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/EBC_rawplotly.RDS\")\nTair_rawplotly&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/Tair_rawplotly.RDS\")\nrH_rawplotly&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/rH_rawplotly.RDS\")\nVPD_rawplotly&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/VPD_rawplotly.RDS\")\nPAR_rawplotly&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/PAR_rawplotly.RDS\")\nWB_rawplotly&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/WB_rawplotly.RDS\")\nTC_rawplotly&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/TC_rawplotly.RDS\")\nSWC_rawplotly&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/SWC_rawplotly.RDS\")\nSWP_rawplotly&lt;-readRDS(\"~/Projects/shiny_dashboard/RDS_objects/SWP_rawplotly.RDS\")"
+  },
+  {
+    "objectID": "meteo.html#row",
+    "href": "meteo.html#row",
+    "title": "Meteorological data",
+    "section": "Row",
+    "text": "Row\n\n\n\n\n\nTable\nstatus\nn_rec\nn_col\nfirst_TS_UTC+1\nlast_TS_UTC+1\nTS_modified_CET\nsize_mb\nTS_missing_fraction\nN_duplicate_TS\n\n\n\n\nCR3000_meteo\nOK\n14105\n27\n2025-09-23 11:00:00\n2026-07-17 10:00:00\n2026-07-17 11:00:26\n4.967\n0\n0\n\n\nCR1000_meteo_Table15\nOK\n25490\n21\n2025-09-23 11:15:00\n2026-07-17 10:00:00\n2026-07-17 11:00:19\n6.704\n0\n0\n\n\nCR1000_CH_PPFchard\nDuplicate timestamps present\n78765\n9\n2024-04-16 22:15:00\n2026-07-17 10:00:00\n2026-07-17 11:00:15\n17.974\n0\n1\n\n\nCR1000_par_PAR_table\nOK\n22500\n24\n2025-04-04 16:00:00\n2026-07-17 09:30:00\n2026-07-17 11:00:20\n6.762\n0\n0\n\n\nCR1000_profile_SoilProfile\nOK\n19451\n38\n2025-11-05 02:45:00\n2026-07-17 09:45:00\n2026-07-17 11:00:24\n6.499\n0\n0\n\n\nCR1000_profile_AtmoProfile\nOK\n23631\n15\n2025-09-13 01:45:00\n2026-07-17 09:45:00\n2026-07-17 11:00:21\n6.312\n0\n0"
+  },
+  {
+    "objectID": "meteo.html#row-1",
+    "href": "meteo.html#row-1",
+    "title": "Meteorological data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "meteo.html#row-2",
+    "href": "meteo.html#row-2",
+    "title": "Meteorological data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "meteo.html#row-3",
+    "href": "meteo.html#row-3",
+    "title": "Meteorological data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "meteo.html#row-4",
+    "href": "meteo.html#row-4",
+    "title": "Meteorological data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "meteo.html#row-5",
+    "href": "meteo.html#row-5",
+    "title": "Meteorological data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This repository hosts the regularly updated .html file of the data dashboard for the experimental site “Plantaditsch” (IT-Pla) in Caldaro sulla Strada del Vino, Bolzano, Italy. Managed by the Tree Ecophysiology and Ecosystems group of the Free University of Bozen-Bolzano.\nhttps://treeecophysiology.unibz.it/"
+  },
+  {
+    "objectID": "index.html#row",
+    "href": "index.html#row",
+    "title": "Meteo data",
+    "section": "",
+    "text": "Table\nstatus\nn_rec\nn_col\nfirst_TS_UTC+1\nlast_TS_UTC+1\nTS_modified_CET\nsize_mb\nTS_missing_fraction\nN_duplicate_TS\n\n\n\n\nCR3000_meteo\nOK\n14105\n27\n2025-09-23 11:00:00\n2026-07-17 10:00:00\n2026-07-17 11:00:26\n4.967\n0\n0\n\n\nCR1000_meteo_Table15\nOK\n25490\n21\n2025-09-23 11:15:00\n2026-07-17 10:00:00\n2026-07-17 11:00:19\n6.704\n0\n0\n\n\nCR1000_CH_PPFchard\nDuplicate timestamps present\n78765\n9\n2024-04-16 22:15:00\n2026-07-17 10:00:00\n2026-07-17 11:00:15\n17.974\n0\n1\n\n\nCR1000_par_PAR_table\nOK\n22500\n24\n2025-04-04 16:00:00\n2026-07-17 09:30:00\n2026-07-17 11:00:20\n6.762\n0\n0\n\n\nCR1000_profile_SoilProfile\nOK\n19451\n38\n2025-11-05 02:45:00\n2026-07-17 09:45:00\n2026-07-17 11:00:24\n6.499\n0\n0\n\n\nCR1000_profile_AtmoProfile\nOK\n23631\n15\n2025-09-13 01:45:00\n2026-07-17 09:45:00\n2026-07-17 11:00:21\n6.312\n0\n0"
+  },
+  {
+    "objectID": "index.html#row-1",
+    "href": "index.html#row-1",
+    "title": "Meteo data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "index.html#row-2",
+    "href": "index.html#row-2",
+    "title": "Meteo data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "index.html#row-3",
+    "href": "index.html#row-3",
+    "title": "Meteo data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "index.html#row-4",
+    "href": "index.html#row-4",
+    "title": "Meteo data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "index.html#row-5",
+    "href": "index.html#row-5",
+    "title": "Meteo data",
+    "section": "Row",
+    "text": "Row"
+  },
+  {
+    "objectID": "flux.html",
+    "href": "flux.html",
+    "title": "Flux data",
+    "section": "",
+    "text": "Warning: Removed 287 rows containing missing values or values outside the scale range\n(`geom_tile()`)."
+  },
+  {
+    "objectID": "flux.html#row",
+    "href": "flux.html#row",
+    "title": "Flux data",
+    "section": "",
+    "text": "Warning: Removed 287 rows containing missing values or values outside the scale range\n(`geom_tile()`)."
+  },
+  {
+    "objectID": "flux.html#row-1",
+    "href": "flux.html#row-1",
+    "title": "Flux data",
+    "section": "Row",
+    "text": "Row\n\nColumn\n\n\n\n\n\n\n\n\nWarning: Removed 287 rows containing missing values or values outside the scale range\n(`geom_tile()`).\n\n\n\n\n\n\n\n\n\n\n\nColumn\n\n\n\n\n\n\n\n\nWarning: Removed 287 rows containing missing values or values outside the scale range\n(`geom_tile()`)."
+  },
+  {
+    "objectID": "flux.html#row-2",
+    "href": "flux.html#row-2",
+    "title": "Flux data",
+    "section": "Row",
+    "text": "Row\n\n\n\n\n\n\n\n\nWarning: Raster pixels are placed at uneven horizontal intervals and will be shifted\nℹ Consider using `geom_tile()` instead.\n\n\nWarning: Removed 287 rows containing missing values or values outside the scale range\n(`geom_raster()`)."
+  },
+  {
+    "objectID": "flux.html#row-3",
+    "href": "flux.html#row-3",
+    "title": "Flux data",
+    "section": "Row",
+    "text": "Row\n\n\n\n\n\n\n\n\nWarning: Raster pixels are placed at uneven horizontal intervals and will be shifted\nℹ Consider using `geom_tile()` instead.\n\n\nWarning: Removed 287 rows containing missing values or values outside the scale range\n(`geom_raster()`)."
+  }
+]

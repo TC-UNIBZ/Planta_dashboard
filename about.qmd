@@ -5,6 +5,4 @@ title-block: false
 
 This website is intended as an exploratory and diagnostic dashboard for the viewing of monitoring data from the experimental site "Plantaditsch" (IT-Pla) in Caldaro sulla Strada del Vino, Bolzano, Italy. Managed by the [Tree Ecophysiology and Ecosystems](https://treeecophysiology.unibz.it/) group of the Free University of Bozen-Bolzano.
 
-
-
-INSERT VARIABLE DESCRIPTIONS HERE 
+For site suggestions contact Torben Callesen at [torcallesen@unibz.it](torcallesen@unibz.it)

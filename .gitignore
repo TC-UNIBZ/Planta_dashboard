@@ -21,3 +21,5 @@ R scripts/
 
 # Optional: if rendering to _site/
 # leave _site/ OUT of .gitignore
+
+/.quarto/

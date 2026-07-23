@@ -6,16 +6,18 @@ title-block: false
 ```{r}
 #| echo: FALSE
 #| output: FALSE
-diagnostics_tbl<-readRDS("~/Projects/shiny_dashboard/RDS_objects/diagnostics_tbl.RDS")
-EBC_rawplotly<-readRDS("~/Projects/shiny_dashboard/RDS_objects/EBC_rawplotly.RDS")
-Tair_rawplotly<-readRDS("~/Projects/shiny_dashboard/RDS_objects/Tair_rawplotly.RDS")
-rH_rawplotly<-readRDS("~/Projects/shiny_dashboard/RDS_objects/rH_rawplotly.RDS")
-VPD_rawplotly<-readRDS("~/Projects/shiny_dashboard/RDS_objects/VPD_rawplotly.RDS")
-PAR_rawplotly<-readRDS("~/Projects/shiny_dashboard/RDS_objects/PAR_rawplotly.RDS")
-WB_rawplotly<-readRDS("~/Projects/shiny_dashboard/RDS_objects/WB_rawplotly.RDS")
-TC_rawplotly<-readRDS("~/Projects/shiny_dashboard/RDS_objects/TC_rawplotly.RDS")
-SWC_rawplotly<-readRDS("~/Projects/shiny_dashboard/RDS_objects/SWC_rawplotly.RDS")
-SWP_rawplotly<-readRDS("~/Projects/shiny_dashboard/RDS_objects/SWP_rawplotly.RDS")
+rds_folder <- "C:/Users/Kaltern/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects"
+
+diagnostics_tbl<-readRDS(paste(rds_folder,"diagnostics_tbl.RDS",sep="/"))
+EBC_rawplotly<-readRDS(paste(rds_folder,"EBC_rawplotly.RDS",sep="/"))
+Tair_rawplotly<-readRDS(paste(rds_folder,"Tair_rawplotly.RDS",sep="/"))
+rH_rawplotly<-readRDS(paste(rds_folder,"rH_rawplotly.RDS",sep="/"))
+VPD_rawplotly<-readRDS(paste(rds_folder,"VPD_rawplotly.RDS",sep="/"))
+PAR_rawplotly<-readRDS(paste(rds_folder,"PAR_rawplotly.RDS",sep="/"))
+WB_rawplotly<-readRDS(paste(rds_folder,"WB_rawplotly.RDS",sep="/"))
+TC_rawplotly<-readRDS(paste(rds_folder,"TC_rawplotly.RDS",sep="/"))
+SWC_rawplotly<-readRDS(paste(rds_folder,"SWC_rawplotly.RDS",sep="/"))
+SWP_rawplotly<-readRDS(paste(rds_folder,"SWP_rawplotly.RDS",sep="/"))
 ```
 
 ## Row {height="30%"}

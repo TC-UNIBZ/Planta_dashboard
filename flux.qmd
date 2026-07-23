@@ -8,6 +8,8 @@ title: "Flux data"
 
 library(tidyverse)
 library(plotly)
+rds_folder <- "C:/Users/Kaltern/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects"
+
 hour_interval <- function(tstamp, int=0.5, digits=0){
   h <- as.character(format(tstamp, "%H:%M")) 
   h2 <- sapply(strsplit(h,":"),
@@ -20,26 +22,38 @@ hour_interval <- function(tstamp, int=0.5, digits=0){
   return(Hour_int)
 }
 
-NEE_fingerprint <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/NEE_fingerprint.RDS")
+NEE_fingerprint <- readRDS(paste(rds_folder,"NEE_fingerprint.RDS",sep="/"))
 
-NEE_rawplotly <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/NEE_rawplotly.RDS")
+NEE_rawplotly <- readRDS(paste(rds_folder,"NEE_rawplotly.RDS",sep="/"))
 
-ET_fingerprint <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/ET_fingerprint.RDS")
+ET_fingerprint <- readRDS(paste(rds_folder,"ET_fingerprint.RDS",sep="/"))
 
-ET_rawplotly <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/ET_rawplotly.RDS")
+ET_rawplotly <- readRDS(paste(rds_folder,"ET_rawplotly.RDS",sep="/"))
 
-LE_fingerprint <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/LE_fingerprint.RDS")
+LE_fingerprint <- readRDS(paste(rds_folder,"LE_fingerprint.RDS",sep="/"))
 
-LE_rawplotly <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/LE_rawplotly.RDS")
+LE_rawplotly <- readRDS(paste(rds_folder,"LE_rawplotly.RDS",sep="/"))
 
-H_fingerprint <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/H_fingerprint.RDS")
+H_fingerprint <- readRDS(paste(rds_folder,"H_fingerprint.RDS",sep="/"))
 
-H_rawplotly <- readRDS("C:/Users/TCallesen/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects/H_rawplotly.RDS")
+H_rawplotly <- readRDS(paste(rds_folder,"H_rawplotly.RDS",sep="/"))
 
+windDir_rawplotly <- readRDS(paste(rds_folder,"windDir_rawplotly.RDS",sep="/"))
 
+diagnostics_tbl_EC <- readRDS(paste(rds_folder,"diagnostics_tbl_EC.RDS",sep="/"))
 ```
-
-
+## Row {height=30%}
+```{r}
+#| echo: FALSE
+#| output: TRUE
+#| title: Last measurements imported
+knitr::kable(
+  diagnostics_tbl_EC,
+  format="simple",
+  digits = 3
+  #,caption = "Diagnostics summary for imported logger data tables"
+)
+```
 ## Row {height=50%}
 ### Column {.tabset}
 ```{r}

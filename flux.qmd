@@ -41,6 +41,8 @@ H_rawplotly <- readRDS(paste(rds_folder,"H_rawplotly.RDS",sep="/"))
 
 windDir_rawplotly <- readRDS(paste(rds_folder,"windDir_rawplotly.RDS",sep="/"))
 
+FFP_rawplotly <- readRDS(paste(rds_folder,"FFP_rawplotly.RDS",sep="/"))
+
 diagnostics_tbl_EC <- readRDS(paste(rds_folder,"diagnostics_tbl_EC.RDS",sep="/"))
 ```
 ## Row {height=30%}
@@ -150,3 +152,27 @@ suppressWarnings(
 print(H_fingerprint)
 )
 ```
+## Row {height=50%}
+### Column 
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: false
+#| error: false
+#| title: 1D Flux Footprint
+FFP_rawplotly
+
+```
+### Column 
+```{r}
+#| echo: false
+#| output: true
+#| message: false
+#| warning: false
+#| error: false
+#| title: Wind Direction
+windDir_rawplotly
+
+```
+

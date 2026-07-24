@@ -5,6 +5,7 @@ project:
 website:
   title: "Plantaditsch...THE DASHBOARD"
   navbar:
+    logo: images/logo.png
     left:
       - href: index.qmd
         text: Meteo data

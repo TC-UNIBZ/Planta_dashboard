@@ -6,7 +6,11 @@ title-block: false
 ```{r}
 #| echo: FALSE
 #| output: FALSE
-rds_folder <- "C:/Users/Kaltern/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects"
+
+user<-Sys.info()["user"]
+rds_folder <- paste("C:/Users",user,"OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects", sep="/") 
+
+# rds_folder <- "C:/Users/Kaltern/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects"
 
 diagnostics_tbl<-readRDS(paste(rds_folder,"diagnostics_tbl.RDS",sep="/"))
 EBC_rawplotly<-readRDS(paste(rds_folder,"EBC_rawplotly.RDS",sep="/"))

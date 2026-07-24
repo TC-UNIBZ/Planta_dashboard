@@ -8,7 +8,8 @@ title: "Flux data"
 
 library(tidyverse)
 library(plotly)
-rds_folder <- "C:/Users/Kaltern/OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects"
+user<-Sys.info()["user"]
+rds_folder <- paste("C:/Users",user,"OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects", sep="/") 
 
 hour_interval <- function(tstamp, int=0.5, digits=0){
   h <- as.character(format(tstamp, "%H:%M")) 

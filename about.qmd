@@ -6,3 +6,46 @@ title-block: false
 This website is intended as an exploratory and diagnostic dashboard for the viewing of monitoring data from the experimental site "Plantaditsch" (IT-Pla) in Caldaro sulla Strada del Vino, Bolzano, Italy. Managed by the [Tree Ecophysiology and Ecosystems](https://treeecophysiology.unibz.it/) group of the Free University of Bozen-Bolzano.
 
 For site suggestions contact Torben Callesen at [torcallesen@unibz.it](torcallesen@unibz.it)
+
+```{r}
+#| echo: FALSE
+#| output: FALSE
+
+library(readxl)
+library(tidyverse)
+library(magrittr)
+library(knitr)
+library(kableExtra)
+
+user<-Sys.info()["user"]
+rds_folder <- paste("C:/Users",user,"OneDrive - Scientific Network South Tyrol/Plantaditsch_repository - General/Data_dashboard/RDS_objects", sep="/") 
+
+
+Vardescriptions <- read_excel(paste(rds_folder,"Vardescriptions.xlsx",sep="/"), 
+    sheet = "Meteo")
+
+
+
+```
+
+```{r}
+#| echo: FALSE
+#| output: TRUE
+#| title: Meteo variable descriptions
+
+Vardescriptions %>%
+  kable(
+    format  = "html",    # must be html for collapse_rows to work
+    digits  = 3,
+    col.names = c("Figure", "Variable", "Units", "Sensor", "Datalogger", "Description")
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "bordered"),
+    full_width        = TRUE,
+    font_size         = 13
+  ) %>%
+  collapse_rows(
+    columns = c(1, 3, 4, 5), #columns to merge
+    valign  = "middle"   # vertically centre the merged labels
+  )
+```

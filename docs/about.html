@@ -82,6 +82,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 
 
 <link rel="stylesheet" href="styles.css">
@@ -149,11 +153,221 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
 <!-- main -->
 
-<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="flow" style="display: grid; grid-template-rows: minmax(3em, max-content); grid-auto-columns: minmax(0, 1fr);">
-<div class="card bslib-card html-fill-container" data-fill="false" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
-<div class="card-body html-fill-item html-fill-container">
 <p>This website is intended as an exploratory and diagnostic dashboard for the viewing of monitoring data from the experimental site “Plantaditsch” (IT-Pla) in Caldaro sulla Strada del Vino, Bolzano, Italy. Managed by the <a href="https://treeecophysiology.unibz.it/">Tree Ecophysiology and Ecosystems</a> group of the Free University of Bozen-Bolzano.</p>
 <p>For site suggestions contact Torben Callesen at <a href="torcallesen@unibz.it">torcallesen@unibz.it</a></p>
+<div class="bslib-grid-item html-fill-item bslib-grid" data-layout="flow" style="display: grid; grid-template-rows: minmax(3em, 1fr); grid-auto-columns: minmax(0, 1fr);">
+<div class="card cell bslib-card html-fill-container" data-title="Meteo variable descriptions" data-bslib-card-init="" data-require-bs-caller="card()" data-full-screen="false">
+<div class="card-header"><div class="card-title"><span style="display: inline">
+Meteo variable descriptions
+</span></div></div>
+<div class="card-body html-fill-item html-fill-container">
+<div class="cell-output-display html-fill-item html-fill-container">
+<table class="table table-striped table-hover table-condensed table-bordered caption-top table-sm small">
+<thead>
+<tr class="header">
+<th style="text-align: left;" data-quarto-table-cell-role="th">Figure</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Variable</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Units</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Sensor</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Datalogger</th>
+<th style="text-align: left;" data-quarto-table-cell-role="th">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td rowspan="3" style="text-align: left; vertical-align: middle !important;">Temperature</td>
+<td style="text-align: left;">0.5m SKH2060</td>
+<td rowspan="3" style="text-align: left; vertical-align: middle !important;">°C</td>
+<td style="text-align: left;">SKH2060</td>
+<td style="text-align: left;">CR1000_meteo</td>
+<td style="text-align: left;">Air temp. measured below the vine canopy at 50cm above ground. Shielded sensor.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">6m CS215</td>
+<td style="text-align: left;">CS215</td>
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">CR3000</td>
+<td style="text-align: left;">Air temp. measured at 6m above ground on the EC tower. Shielded sensor.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">surface CNR1</td>
+<td style="text-align: left;">CNR1</td>
+<td style="text-align: left;">Calculated vineyard surface temp. using the Rout_LW_6m and the Boltzmann equation.</td>
+</tr>
+<tr class="even">
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">Relative Humidity</td>
+<td style="text-align: left;">0.5m SKH2060</td>
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">%</td>
+<td style="text-align: left;">SKH2060</td>
+<td style="text-align: left;">CR1000_meteo</td>
+<td style="text-align: left;">rH measured below the vine canopy at 50cm above ground. Shielded sensor. - SUSPECT</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6m CS215</td>
+<td style="text-align: left;">CS215</td>
+<td style="text-align: left;">CR3000</td>
+<td style="text-align: left;">rH measured at 6m above ground on the EC tower. Shielded sensor.</td>
+</tr>
+<tr class="even">
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">Vapour Pressure Deficit</td>
+<td style="text-align: left;">0.5m SKH2060</td>
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">hPa</td>
+<td style="text-align: left;">SKH2060</td>
+<td style="text-align: left;">CR1000_meteo</td>
+<td style="text-align: left;">VPD calculated using rH and air temp. measured below the vine canopy at 50cm above ground.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6m CS215</td>
+<td style="text-align: left;">CS215</td>
+<td rowspan="3" style="text-align: left; vertical-align: middle !important;">CR3000</td>
+<td style="text-align: left;">VPD calculated using rH and air temp. measured at 6m above ground on the EC tower.</td>
+</tr>
+<tr class="even">
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">Rainfall</td>
+<td style="text-align: left;">30min PPT</td>
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">mm</td>
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">ARG100</td>
+<td style="text-align: left;">30min total rainfall measured at 6 m abv. Ground on EC tower.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Daily cumm. PPT</td>
+<td style="text-align: left;">Cumulative daily rainfall calculated using 30min PPT .</td>
+</tr>
+<tr class="even">
+<td rowspan="6" style="text-align: left; vertical-align: middle !important;">Vol. Soil Water Content</td>
+<td style="text-align: left;">Depth_Position</td>
+<td rowspan="6" style="text-align: left; vertical-align: middle !important;">% vol./vol.</td>
+<td rowspan="5" style="text-align: left; vertical-align: middle !important;">Teros 11</td>
+<td style="text-align: left;">CR1000_profile</td>
+<td style="text-align: left;">SWC sensor profile near the EC tower base. 4 depths (20, 40, 60, 80 cm), 2 positions (IR = Interrow, VR = Vine Row). Only working sensors shown.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">20cm_IRa</td>
+<td rowspan="4" style="text-align: left; vertical-align: middle !important;">CR1000_par</td>
+<td style="text-align: left;">20cm depth, interrow.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">20cm_VRdrip</td>
+<td style="text-align: left;">20cm depth, vine row under dripper.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">20cm_VRnodrip</td>
+<td style="text-align: left;">20cm depth, vine row not directly under dripper.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">20cm_IRb</td>
+<td style="text-align: left;">20cm depth, interrow adjacent to IRa</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">15cm_position</td>
+<td style="text-align: left;">CS616</td>
+<td style="text-align: left;">CR3000</td>
+<td style="text-align: left;">Superficial TDR sensors near the EC tower base in two positions (IR = Interrow, VR = Vine Row).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Soil Water Potential</td>
+<td style="text-align: left;">Depth_Position</td>
+<td style="text-align: left;">kPa</td>
+<td style="text-align: left;">MPS6</td>
+<td style="text-align: left;">CR1000_profile</td>
+<td style="text-align: left;">SWP sensor profile near the EC tower base. 4 depths (20, 40, 60, 80 cm), 2 positions (IR = Interrow, VR = Vine Row). Only working sensors shown.</td>
+</tr>
+<tr class="odd">
+<td rowspan="8" style="text-align: left; vertical-align: middle !important;">Energy Balance Components</td>
+<td style="text-align: left;">G_10cm_1 HFP01</td>
+<td rowspan="8" style="text-align: left; vertical-align: middle !important;">W m-2</td>
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">HFP01</td>
+<td rowspan="4" style="text-align: left; vertical-align: middle !important;">CR3000</td>
+<td style="text-align: left;">Soil heat flux at EC tower base.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">G_10cm_2 HFP01</td>
+<td style="text-align: left;">Soil heat flux at EC tower base.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rinc_LW_6m CNR1</td>
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">CNR1</td>
+<td style="text-align: left;">Incoming longwave radiation at 6m abv ground on EC tower.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rinc_SW_6m CNR1</td>
+<td style="text-align: left;">Incoming shortwave radiation at 6m abv ground on EC tower.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rn_0.5m LPNET07</td>
+<td style="text-align: left;">LPNET07</td>
+<td style="text-align: left;">CR1000_meteo</td>
+<td style="text-align: left;">Net radiation measured below the vine canopy at 50cm above ground.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rn_6m CNR1</td>
+<td rowspan="3" style="text-align: left; vertical-align: middle !important;">CNR1</td>
+<td rowspan="3" style="text-align: left; vertical-align: middle !important;">CR3000</td>
+<td style="text-align: left;">Net radiation at 6m abv ground on EC tower.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Rout_LW_6m CNR1</td>
+<td style="text-align: left;">Outgoing longwave radiation at 6m abv ground on EC tower.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Rout_SW_6m CNR1</td>
+<td style="text-align: left;">Outgoing shortwave radiation at 6m abv ground on EC tower.</td>
+</tr>
+<tr class="odd">
+<td rowspan="8" style="text-align: left; vertical-align: middle !important;">PAR</td>
+<td style="text-align: left;">PARabv_3m</td>
+<td rowspan="8" style="text-align: left; vertical-align: middle !important;">μmol m-2 s-1</td>
+<td style="text-align: left;">SQ-512-SS</td>
+<td style="text-align: left;">CR1000_par</td>
+<td style="text-align: left;">Above-canopy incoming PAR at 3m above ground abv PAR datalogger.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PARabv_4m</td>
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">BF5</td>
+<td rowspan="4" style="text-align: left; vertical-align: middle !important;">CR3000</td>
+<td style="text-align: left;">Total incoming PAR at approx 4m abv ground on EC tower.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PARabv_4m_diffuse</td>
+<td style="text-align: left;">Diffuse fraction of total incoming PAR at 4m on EC tower.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PARabv_6m</td>
+<td style="text-align: left;">SQ-521-SS</td>
+<td style="text-align: left;">Incoming PAR at 6m abv ground on EC tower.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PARabv_6m_extended</td>
+<td style="text-align: left;">SQ-617-SS</td>
+<td style="text-align: left;">Incoming EXTENDED PAR at 6m abv ground on EC tower.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PARblw_CH</td>
+<td rowspan="2" style="text-align: left; vertical-align: middle !important;">SQ-521-SS</td>
+<td style="text-align: left;">CR1000_CH</td>
+<td style="text-align: left;">Below-canopy transmitted PAR beneath Chardonnay vines.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PARblw_SB</td>
+<td style="text-align: left;">CR1000_meteo</td>
+<td style="text-align: left;">Below-canopy transmitted PAR beneath Sauvignon blanc vines.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PARblw_sv/cc</td>
+<td style="text-align: left;">SQ-512-SS</td>
+<td style="text-align: left;">CR1000_par</td>
+<td style="text-align: left;">Below-canopy transmitted PAR beneath spontaneous vegetation (sv) or cover crops (cc) at ground level in the interrow centre.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Thermocouple Height Profile</td>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">°C</td>
+<td style="text-align: left;">thin-wire thermocouple</td>
+<td style="text-align: left;">CR1000_profile</td>
+<td style="text-align: left;">A series of thermocouples placed at 0.5, 1, 2, 3, 4, 5, and 6m above ground on the SE corner of the EC tower. Unshielded - not reliable under direct sunlight.</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <bslib-tooltip placement="auto" bsoptions="[]" data-require-bs-version="5" data-require-bs-caller="tooltip()">
     <template>Expand</template>
